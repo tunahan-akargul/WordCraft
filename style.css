@@ -25,6 +25,9 @@ body{
     border-width: 5px;
     border-radius: 2vw;
     border-width: 10px;
+
+    margin-left: 150px;
+
     margin-top: 6vw;
 }
 .englishInput::placeholder{
@@ -51,6 +54,8 @@ body{
     border-style: solid;
     border-radius: 2vw;
     border-width: 10px;
+
+    margin-left: 150px;
 }
 .words{
     border-style: solid;
