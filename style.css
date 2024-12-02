@@ -31,6 +31,9 @@ html, body {
     display: block;
     margin: 6vw auto;
 }
+.myInput::placeholder{
+    font-family: "Rubik Dirt", system-ui;
+}
 .arrows {
     display: flex;
     justify-content: center;
@@ -52,7 +55,7 @@ html, body {
     border-radius: 2vw;
     border-width: 10px;
     display: block;
-    margin: 5vw auto;
+    margin-bottom: 5vw;
 }
 .words {
     border-style: solid;
@@ -70,8 +73,12 @@ html, body {
     font-size: 4.5vw;
     display: flex;
     justify-content: space-between;
-    gap: 7vw;
+    width: 73vw;
     padding: 5vw 5vw;
+}
+.colon{
+    position: absolute;
+    left: 44%; /* Ebeveynin yatay ortasına taşır */
 }
 .two {
     display: flex;

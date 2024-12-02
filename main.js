@@ -17,7 +17,7 @@ addWordButton.addEventListener("click", function () {
   const turkishWord = turkishInput.value;
 
   if (englishWord.trim() !== "" && turkishWord.trim() !== "") {
-    if ((englishWord.length + turkishWord.length) <= 21){
+    if ((englishWord.length <= 12 && turkishWord.length <= 12)){
         addWord(englishWord, turkishWord);
         saveWordsToLocalStorage();
         wordsDiv.style.visibility = "visible";
@@ -58,6 +58,7 @@ function addWord(englishWord, turkishWord) {
 
   const colonLabel = document.createElement("label");
   colonLabel.textContent = ":";
+  colonLabel.classList.add("colon");
 
   const turkishLabel = document.createElement("label");
   turkishLabel.classList.add("turkishWord");
