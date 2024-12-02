@@ -1,0 +1,101 @@
+
+body{
+    background-color: #212529;
+}
+.firstTitle{
+    font-family: "Caesar Dressing", system-ui;
+    color: #20C997;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 11vw;
+    margin-top: 3vw;
+}
+.myInput{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 7vw;
+    font-family: "Rubik Dirt", system-ui;
+    width: 70vw;
+    border-color: #FFC107;
+    color: #faf1d7;
+    background-color: #20C997;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 2vw;
+    border-width: 10px;
+
+    margin-left: 150px;
+
+    margin-top: 6vw;
+}
+.englishInput::placeholder{
+    color: #FFC107;
+}
+.arrows{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.arrow{
+    width: 25vw;
+}
+.addButton{
+    width: 72vw;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 7vw;
+    font-family: "Rubik Dirt", system-ui;
+    border-color: #faf1d7;
+    color: #faf1d7;
+    background-color: #212529;
+    border-style: solid;
+    border-radius: 2vw;
+    border-width: 10px;
+
+    margin-left: 150px;
+}
+.words{
+    border-style: solid;
+    border-radius: 2vw;
+    border-width: 10px;
+    font-family: "Rubik Dirt", system-ui;
+    border-color: #faf1d7;
+    background-color: #212529;
+    width: 97vw;
+
+    margin-top: 10vw;
+
+}
+.word{
+    color: #faf1d7;
+    font-size: 4.5vw;
+    display: flex;
+    justify-content: space-between;
+    gap: 7vw;
+    padding: 5vw 5vw;
+
+}
+.two{
+    display: flex;
+    justify-content: space-between;
+}
+.removeButton{
+    height: 6.5vw;
+    border-radius: 1vw;
+    margin-top: 5vw;
+    margin-right: 5vw;
+}
+.alertMessage{
+    font-family: "Rubik Dirt", system-ui;
+    color: #9e0000;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 6vw;
+    margin-top: 3vw;
+    margin: 5vw 0;
+    visibility: hidden;
+}
