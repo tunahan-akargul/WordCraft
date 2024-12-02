@@ -1,20 +1,20 @@
-
-body{
+body {
     background-color: #212529;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
-.firstTitle{
+.firstTitle {
     font-family: "Caesar Dressing", system-ui;
     color: #20C997;
-    display: flex;
     text-align: center;
-    justify-content: center;
     font-size: 11vw;
     margin-top: 3vw;
 }
-.myInput{
-    display: flex;
+.myInput {
     text-align: center;
-    justify-content: center;
     font-size: 7vw;
     font-family: "Rubik Dirt", system-ui;
     width: 70vw;
@@ -22,30 +22,23 @@ body{
     color: #faf1d7;
     background-color: #20C997;
     border-style: solid;
-    border-width: 5px;
     border-radius: 2vw;
     border-width: 10px;
-
-    margin-left: 150px;
-
-    margin-top: 6vw;
+    display: block;
+    margin: 6vw auto;
 }
-.englishInput::placeholder{
-    color: #FFC107;
-}
-.arrows{
+.arrows {
     display: flex;
-    text-align: center;
     justify-content: center;
+    gap: 2vw;
+    margin: 2vw 0;
 }
-.arrow{
+
+.arrow {
     width: 25vw;
 }
-.addButton{
+.addButton {
     width: 72vw;
-    display: flex;
-    text-align: center;
-    justify-content: center;
     font-size: 7vw;
     font-family: "Rubik Dirt", system-ui;
     border-color: #faf1d7;
@@ -54,10 +47,10 @@ body{
     border-style: solid;
     border-radius: 2vw;
     border-width: 10px;
-
-    margin-left: 150px;
+    display: block;
+    margin: 5vw auto;
 }
-.words{
+.words {
     border-style: solid;
     border-radius: 2vw;
     border-width: 10px;
@@ -65,37 +58,33 @@ body{
     border-color: #faf1d7;
     background-color: #212529;
     width: 97vw;
-
-    margin-top: 10vw;
-
+    margin: 10vw auto;
+    padding: 5vw;
 }
-.word{
+.word {
     color: #faf1d7;
     font-size: 4.5vw;
     display: flex;
     justify-content: space-between;
     gap: 7vw;
     padding: 5vw 5vw;
-
 }
-.two{
+.two {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-.removeButton{
+.removeButton {
     height: 6.5vw;
     border-radius: 1vw;
     margin-top: 5vw;
     margin-right: 5vw;
 }
-.alertMessage{
+.alertMessage {
     font-family: "Rubik Dirt", system-ui;
     color: #9e0000;
-    display: flex;
     text-align: center;
-    justify-content: center;
     font-size: 6vw;
-    margin-top: 3vw;
-    margin: 5vw 0;
+    margin: 5vw auto;
     visibility: hidden;
 }
