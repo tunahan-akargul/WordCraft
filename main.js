@@ -7,7 +7,7 @@ const wordsDiv = document.getElementById("words");
 if (wordsDiv.innerHTML.trim() === "") {
     wordsDiv.style.visibility = "hidden";
 }
-//youu
+
 window.addEventListener("load", function () {
   const savedWords = localStorage.getItem("words");
   if (savedWords) {
