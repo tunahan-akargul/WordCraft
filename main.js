@@ -4,10 +4,6 @@ const alertMessage = document.getElementById("alertMessage");
 const addWordButton = document.getElementById("addButton");
 const wordsDiv = document.getElementById("words");
 
-if (wordsDiv.innerHTML.trim() === "") {
-    wordsDiv.style.visibility = "hidden";
-}
-
 window.addEventListener("load", function () {
   const savedWords = localStorage.getItem("words");
   if (savedWords) {
