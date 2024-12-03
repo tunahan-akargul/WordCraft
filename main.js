@@ -3,6 +3,11 @@ const turkishInput = document.getElementById("turkishInput");
 const alertMessage = document.getElementById("alertMessage");
 const addWordButton = document.getElementById("addButton");
 const wordsDiv = document.getElementById("words");
+const englishShowButton = document.getElementById("englishShowButton");
+const turkishShowButton = document.getElementById("turkishShowButton");
+
+let hidingButtonEnglish = false;
+let hidingButtonTurkish = false;
 
 window.addEventListener("load", function () {
   const savedWords = localStorage.getItem("words");
@@ -12,7 +17,7 @@ window.addEventListener("load", function () {
   }
 });
 
-addWordButton.addEventListener("click", function () {
+  addWordButton.addEventListener("click", function () {
   const englishWord = englishInput.value;
   const turkishWord = turkishInput.value;
 
@@ -36,12 +41,75 @@ addWordButton.addEventListener("click", function () {
 
 document.addEventListener("click", function (event) {
   if (event.target.id === "removeButton") {
-    const removeTwoDiv = event.target.parentElement.parentElement;
-    removeTwoDiv.remove();
-    saveWordsToLocalStorage();
+  const removeTwoDiv = event.target.parentElement.parentElement;
+  removeTwoDiv.remove();
+  saveWordsToLocalStorage();
   }
   if (wordsDiv.innerHTML.trim() === "") {
     wordsDiv.style.visibility = "hidden";
+  }
+  if(event.target.id == "englishShowButton"){
+    if (hidingButtonEnglish == true){
+      event.target.classList.add("showButtonAnimation");
+      event.target.classList.remove("hideButtonAnimation");
+      event.target.textContent = "Hide";
+      hidingButtonEnglish = false;
+      const englishWords = document.querySelectorAll(".englishWord");
+      englishWords.forEach(word => {
+        word.style.visibility = "visible";
+      });
+    }else{
+      event.target.classList.remove("showButtonAnimation");
+      event.target.classList.add("hideButtonAnimation");
+      event.target.textContent = "Show";
+      hidingButtonEnglish = true;
+      const englishWords = document.querySelectorAll(".englishWord");
+      englishWords.forEach(word => {
+        word.style.visibility = "hidden";
+      });
+
+      if (hidingButtonTurkish == true){
+        turkishShowButton.classList.add("showButtonAnimation");
+        turkishShowButton.classList.remove("hideButtonAnimation");
+        turkishShowButton.textContent = "Hide";
+        hidingButtonTurkish = false;
+        const turkishWords = document.querySelectorAll(".turkishWord");
+        turkishWords.forEach(word => {
+          word.style.visibility = "visible";
+        });
+      }
+    }
+  }else if(event.target.id == "turkishShowButton"){
+    if (hidingButtonTurkish == true){
+      event.target.classList.add("showButtonAnimation");
+      event.target.classList.remove("hideButtonAnimation");
+      event.target.textContent = "Hide";
+      hidingButtonTurkish = false;
+      const turkishWords = document.querySelectorAll(".turkishWord");
+      turkishWords.forEach(word => {
+        word.style.visibility = "visible";
+      });
+    }else{
+      event.target.classList.remove("showButtonAnimation");
+      event.target.classList.add("hideButtonAnimation");
+      event.target.textContent = "Show";
+      hidingButtonTurkish = true;
+      const turkishWords = document.querySelectorAll(".turkishWord");
+      turkishWords.forEach(word => {
+        word.style.visibility = "hidden";
+      });
+
+      if (hidingButtonEnglish == true){
+        englishShowButton.classList.add("showButtonAnimation");
+        englishShowButton.classList.remove("hideButtonAnimation");
+        englishShowButton.textContent = "Hide";
+        hidingButtonEnglish = false;
+        const englishWords = document.querySelectorAll(".englishWord");
+        englishWords.forEach(word => {
+          word.style.visibility = "visible";
+        });
+      }
+    }
   }
 });
 

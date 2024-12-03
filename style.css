@@ -57,6 +57,16 @@ html, body {
     display: block;
     margin-bottom: 5vw;
 }
+.showButtonDiv{
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    width: 75vw;
+    font-size: 4.5vw;
+    margin-top: 5vw;
+    margin-left: -11vw;
+    margin-bottom: -1vw;
+}
 .words {
     border-style: solid;
     border-radius: 2vw;
@@ -65,7 +75,6 @@ html, body {
     border-color: #faf1d7;
     background-color: #212529;
     width: 93vw;
-    margin: 10vw auto;
     padding: 1vw;
 }
 .word {
@@ -76,9 +85,56 @@ html, body {
     width: 73vw;
     padding: 5vw 5vw;
 }
+.showButton{
+    font-family: "Rubik Dirt", system-ui;
+    background-color:#212529;
+    color:#faf1d7;
+    border-color: #faf1d7;
+    border-style: solid;
+    border-width: 1vw;
+    font-size: 4.5vw;
+    display: flex;
+    justify-content: space-between;
+    width: 39vw;
+    padding: 2vw 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+.showButtonAnimation{
+    animation-name: showButtonAnimation;
+    animation-duration: 0.15s;
+    animation-fill-mode: forwards;
+}
+.hideButtonAnimation{
+    animation-name: hideButtonAnimation;
+    animation-duration: 0.15s;
+    animation-fill-mode: forwards;
+}
+@keyframes showButtonAnimation{
+    0%{
+        background-color: #faf1d7;
+        color:#212529;
+    }
+    100%{
+        background-color: #212529;
+        color: #faf1d7;
+    }
+}
+@keyframes hideButtonAnimation{
+    0%{
+        background-color: #212529;
+        color: #faf1d7;
+    }
+    100%{
+        background-color: #faf1d7;
+        color:#212529;
+    }
+}
 .colon{
     position: absolute;
-    left: 44%; /* Ebeveynin yatay ortasına taşır */
+    left: 44%; 
 }
 .two {
     display: flex;
