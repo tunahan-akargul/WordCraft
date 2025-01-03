@@ -1,7 +1,7 @@
-const englishInput = document.getElementById("englishInput");
+const paragraphInput = document.getElementById("englishInput");
 const turkishInput = document.getElementById("turkishInput");
 const alertMessage = document.getElementById("alertMessage");
-const addWordButton = document.getElementById("addButton");
+const addSentenceButton = document.getElementById("addButton");
 const wordsDiv = document.getElementById("words");
 const englishShowButton = document.getElementById("englishShowButton");
 const turkishShowButton = document.getElementById("turkishShowButton");
@@ -13,21 +13,21 @@ window.addEventListener("load", function () {
   const savedWords = localStorage.getItem("words");
   if (savedWords) {
     const wordsArray = JSON.parse(savedWords);
-    wordsArray.forEach((word) => addWord(word.english, word.turkish));
+    wordsArray.forEach((word) => addSentence(word.english, word.turkish));
   }
 });
 
-  addWordButton.addEventListener("click", function () {
-  const englishWord = englishInput.value;
+  addSentenceButton.addEventListener("click", function () {
+  const englishWord = paragraphInput.value;
   const turkishWord = turkishInput.value;
 
   if (englishWord.trim() !== "" && turkishWord.trim() !== "") {
     if ((englishWord.length <= 12 && turkishWord.length <= 12)){
-        addWord(englishWord, turkishWord);
-        saveWordsToLocalStorage();
+        addSentence(englishWord, turkishWord);
+        saveSentencesToLocalStorage();
         wordsDiv.style.visibility = "visible";
         alertMessage.style.visibility = "hidden";
-        englishInput.value = "";
+        paragraphInput.value = "";
         turkishInput.value = "";
     }else{
         alertMessage.textContent = "This Words Are Very Long.";
@@ -43,7 +43,7 @@ document.addEventListener("click", function (event) {
   if (event.target.id === "removeButton") {
   const removeTwoDiv = event.target.parentElement.parentElement;
   removeTwoDiv.remove();
-  saveWordsToLocalStorage();
+  saveSentencesToLocalStorage();
   }
   if (wordsDiv.innerHTML.trim() === "") {
     wordsDiv.style.visibility = "hidden";
@@ -113,7 +113,7 @@ document.addEventListener("click", function (event) {
   }
 });
 
-function addWord(englishWord, turkishWord) {
+function addSentence(englishWord, turkishWord) {
   const twoDiv = document.createElement("div");
   twoDiv.classList.add("two");
 
@@ -149,7 +149,7 @@ function addWord(englishWord, turkishWord) {
   wordsDiv.appendChild(twoDiv);
 }
 
-function saveWordsToLocalStorage() {
+function saveSentencesToLocalStorage() {
   const words = [];
   wordsDiv.querySelectorAll(".two").forEach((twoDiv) => {
     const englishWord = twoDiv.querySelector(".englishWord").textContent;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="Images/realIcon-photoaidcom-cropped.png" type="image/x-icon">
+    <link rel="icon" href="../Images/realIcon-photoaidcom-cropped.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Mogra&family=Rubik+Bubbles&family=Rubik+Dirt&display=swap" rel="stylesheet">
@@ -18,26 +18,21 @@
 </head>
     <body>
         <div class="pageButtonDiv">
-            <button class="pageButton" style="background-color:#20C997;">Word</button>
-            <button class="pageButton" onclick="location.href='SentencePage/SentencePage.html';">Sentence</button>
+            <button class="pageButton" onclick="location.href='../index.html';">Word</button>
+            <button class="pageButton" style="background-color:#20C997;">Sentence</button>
         </div>
         <label class="firstTitle" aria-placeholder="ahahha">WordWise</label>
-        <input type="text" class="myInput" id="englishInput" placeholder="Enter a word">
+        <select class="mySelect" id="mySelect" placeholder="Select a word">
+            <option value="apple">Select a word</option>
+        </select>
         <div class="arrows">
-            <img src="Images/image (1).png" class="arrow">
-            <img src="Images/image (1).png" class="arrow">
-            <img src="Images/image (1).png" class="arrow">
+            <img src="../Images/image (1).png" class="arrow">
+            <img src="../Images/image (1).png" class="arrow">
+            <img src="../Images/image (1).png" class="arrow">
         </div>
-        <input type="text" id="turkishInput" placeholder="Enter a word" class="myInput" style="margin:0;">
+        <textarea id="paragraphInput" placeholder="Use this word in a sentence" class="myInput" style="margin:0;"></textarea>
         <label class="alertMessage" id="alertMessage"></label>
-        <button class="addButton" id="addButton">Add Word</button>
-
-        <div class="showButtonDiv">
-            <button class="showButton" id="englishShowButton" style="margin-right: -1vw;">Hide</button>
-            <button class="showButton" id="turkishShowButton">Hide</button>
-        </div>
-        <div class="words" id="words">
-        </div>
+        <button class="addButton" id="addButton">Add Sentence</button>
     </body>
 </html>
-<script src="main.js"></script>
+<script src="sentencePage.js"></script>

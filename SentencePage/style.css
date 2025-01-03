@@ -18,8 +18,8 @@ html, body {
     margin-top: 3vw;
 }
 .myInput {
-    text-align: center;
-    font-size: 7vw;
+    text-align: left;
+    font-size: 4.5vw;
     font-family: "Rubik Dirt", system-ui;
     width: 70vw;
     border-color: #FFC107;
@@ -30,6 +30,7 @@ html, body {
     border-width: 10px;
     display: block;
     margin: 6vw auto;
+    min-height: 10vw;
 }
 .myInput::placeholder{
     font-family: "Rubik Dirt", system-ui;
@@ -70,21 +71,22 @@ html, body {
 .words {
     border-style: solid;
     border-radius: 2vw;
-    border-width: 10px;
+    border-width: 5px;
     font-family: "Rubik Dirt", system-ui;
-    border-color: #faf1d7;
+    border-color:#FFC107;
     background-color: #212529;
     width: 93vw;
     padding: 1vw;
-    margin-bottom: 10vw;
+    margin-bottom: 3vw;
 }
 .word {
     color: #faf1d7;
     font-size: 4.5vw;
     display: flex;
     justify-content: space-between;
-    width: 73vw;
-    padding: 5vw 5vw;
+    width: 80vw;
+    padding: 2vw;
+    padding-top: 3vw;
 }
 .showButton{
     font-family: "Rubik Dirt", system-ui;
@@ -177,4 +179,31 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.mySelect{
+    text-align: center;
+    font-size: 7vw;
+    font-family: "Rubik Dirt", system-ui;
+    width: 70vw;
+    border-color: #FFC107;
+    color: #faf1d7;
+    background-color: #20C997;
+    border-style: solid;
+    border-radius: 2vw;
+    border-width: 10px;
+    display: block;
+    margin: 6vw auto;
+}
+
+.sentenceTitle{
+    font-size: 5vw;
+    color:#20C997;
+}
+.sentenceTitleDiv{
+    display: flex;
+    justify-content: center;
+}
+.sentence{
+    width: 80vw;
+    word-wrap: break-word;
 }
