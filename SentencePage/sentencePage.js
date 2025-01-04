@@ -48,13 +48,13 @@ window.addEventListener("load", function () {
   const paragraphValue = paragraphInput.value;
 
   if (mySelect.value !== "Select a word") {
-    if ((paragraphValue.length <= 32142)){
+    if ((paragraphValue.trim() !== "")){
         addSentence(selectValue ,paragraphValue);
         saveSentencesToLocalStorage();
         alertMessage.style.visibility = "hidden";
         paragraphInput.value = "";
     }else{
-        alertMessage.textContent = "This Sentence Are Very Long.";
+        alertMessage.textContent = "Please Enter A Sentence";
         alertMessage.style.visibility = "visible";
     }
   } else {
