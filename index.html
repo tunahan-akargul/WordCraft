@@ -8,11 +8,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Caesar+Dressing&family=Mogra&family=Rubik+Bubbles&family=Rubik+Dirt&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="viewport" content="width=1100, initial-scale=1">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="WordWise helps you learn and explore words effectively. Discover our platform at WordWise.site.">
+    <meta name="keywords" content="WordWise, Word, Wise, Education, WordEducation, Learn, Word Wise, vocabulary learning, language learning, word meanings, improve English, dictionary, word education" />
+    <meta name="author" content="Tunahan Akargül" />
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="WordWise" />
+    <meta property="og:description" content="WordWise helps you learn and explore words effectively. Discover our platform at WordWise.site." />
+    <meta property="og:image" content="Images/realIcon-photoaidcom-cropped.png"/>
+    <meta property="og:url" content="https://wordwise.site" />
+    <link rel="canonical" href="https://wordwise.site/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://wordwise.site/sitemap.xml" />
     <link rel="stylesheet" href="style.css">
     <title>WordWise | Learn Word Wisely</title>
 </head>
@@ -21,7 +29,7 @@
             <button class="pageButton" style="background-color:#20C997;">Word</button>
             <button class="pageButton" onclick="location.href='SentencePage/SentencePage.html';">Sentence</button>
         </div>
-        <label class="firstTitle" aria-placeholder="ahahha">WordWise</label>
+        <label class="firstTitle">WordWise</label>
         <input type="text" class="myInput" id="englishInput" placeholder="Enter a word">
         <div class="arrows">
             <img src="Images/image (1).png" class="arrow">
@@ -41,3 +49,16 @@
     </body>
 </html>
 <script src="main.js"></script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "WordWise",
+      "url": "https://wordwise.site",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://wordwise.site/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+</script>
